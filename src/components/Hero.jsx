@@ -13,7 +13,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src="/images/bg.jpg" 
+          src="/images/bg.png" 
           alt="Background" 
           className="w-full h-full object-cover"
         />
@@ -62,20 +62,20 @@ export default function Hero() {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-dm-serif text-[#1E4E79] mb-2 leading-tight animate-fade-up">
               {authorInfo.name}
             </h1>
-            <p className="text-lg font-roboto-slab text-[#0f5779] mb-6 animate-fade-up-delayed">
+            <p className="text-lg font-roboto-slab text-[#121213] mb-6 animate-fade-up-delayed">
               PhD, MA, BA • PSI CHI • NSLS
             </p>
 
             <div className="w-24 h-[2px] bg-gradient-to-r from-[#C9A227] to-[#1E4E79] mb-8 mx-auto md:mx-0"></div>
 
             {/* Main tagline */}
-            <p className="text-xl text-[#1E4E79]/70 mb-4 font-roboto-slab font-medium animate-fade-up-delayed">
+            {/* <p className="text-xl text-[#1E4E79]/70 mb-4 font-roboto-slab font-medium animate-fade-up-delayed">
               <span className="text-[#C9A227] font-bold">Practice</span> what you Preach,{" "}
               <span className="text-[#C9A227] font-bold">Preach</span> what you Practice
-            </p>
+            </p> */}
 
             {/* Subtitle - Exploring world phenomena */}
-            <p className="text-[#1E4E79]/90 font-playfair italic text-sm mb-6 animate-fade-up-delayed">
+            <p className="text-[#02345f] font-playfair italic text-2xl mb-6 animate-fade-up-delayed">
               "Exploring world phenomena from a psychology perspective"
             </p>
 
@@ -96,7 +96,7 @@ export default function Hero() {
             </div>
 
             {/* Quote */}
-            <p className="text-[#1E4E79]/90 leading-relaxed max-w-lg mx-auto md:mx-0 font-playfair italic text-base border-l-2 border-[#C9A227]/40 pl-6 py-2 animate-fade-up-delayed-2">
+            <p className="text-[#02345f]/90 leading-relaxed max-w-lg mx-auto md:mx-0 font-playfair italic text-base border-l-2 border-[#C9A227]/40 pl-6 py-2 animate-fade-up-delayed-2">
               "Where one person sees a skeptical impossibility, another sees a realistic possibility."
             </p>
 

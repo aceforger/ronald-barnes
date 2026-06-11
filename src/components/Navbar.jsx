@@ -65,13 +65,13 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="/" onClick={handleLogoClick} className="flex items-center gap-3 group">
             <div className="relative w-9 h-9 flex items-center justify-center">
-              <svg className="w-8 h-8 text-[#C9A227] group-hover:text-[#1E4E79] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+              <svg className="w-8 h-8 text-[#f7be03] group-hover:text-[#1E4E79] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
               </svg>
             </div>
             <div>
-              <span className="font-dm-serif text-2xl text-[#1E4E79] group-hover:text-[#c99027] transition-colors leading-tight">
+              <span className="font-dm-serif text-3xl text-[#1E4E79] group-hover:text-[#c99027] transition-colors leading-tight">
                 Ronald Barnes
               </span>
               <span className="text-[10px] font-roboto-slab font-bold text-[black] uppercase tracking-[0.2em] leading-tight block">
