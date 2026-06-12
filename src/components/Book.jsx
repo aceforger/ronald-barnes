@@ -31,6 +31,14 @@ export default function Book() {
                   <div className="absolute top-3 left-3 z-10 px-2.5 py-1 bg-[#C9A227] text-white text-xs font-roboto-slab font-semibold rounded-full">
                     {bookItem.statusText}
                   </div>
+                  {/* Trailer indicator */}
+                  {bookItem.trailer && (
+                    <div className="absolute top-3 right-3 z-10 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center shadow-lg">
+                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"/>
+                      </svg>
+                    </div>
+                  )}
                   <img src={bookItem.coverImage} alt={bookItem.title} className="w-36 h-48 object-contain group-hover:scale-105 transition-transform duration-500"
                     onError={(e) => {
                       e.target.style.display = 'none'
@@ -63,9 +71,19 @@ export default function Book() {
       {/* Book Detail Modal */}
       {selectedBook && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#F8F7F2]/90 backdrop-blur-sm" onClick={() => setSelectedBook(null)}>
-          <div className="bg-white max-w-5xl w-full max-h-[85vh] overflow-y-auto shadow-2xl border border-[#1E4E79]/10 rounded-2xl" onClick={(e) => e.stopPropagation()}>
+          <div className="bg-white max-w-7xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-[#1E4E79]/10 rounded-2xl" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between p-6 border-b border-[#1E4E79]/8 sticky top-0 bg-white z-10">
-              <span className="px-3 py-1 bg-[#C9A227] text-white text-xs font-roboto-slab font-semibold rounded-full">{selectedBook.statusText}</span>
+              <div className="flex items-center gap-3">
+                <span className="px-3 py-1 bg-[#C9A227] text-white text-xs font-roboto-slab font-semibold rounded-full">{selectedBook.statusText}</span>
+                {selectedBook.trailer && (
+                  <span className="text-[10px] font-roboto-slab font-bold text-red-500 tracking-wider uppercase flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"/>
+                    </svg>
+                    Has Trailer
+                  </span>
+                )}
+              </div>
               <button onClick={() => setSelectedBook(null)} className="text-[#1E4E79]/40 hover:text-[#C9A227] transition-colors">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -73,6 +91,9 @@ export default function Book() {
               </button>
             </div>
             <div className="p-6 md:p-10">
+              
+
+              {/* Book Details */}
               <div className="grid md:grid-cols-5 gap-10">
                 <div className="md:col-span-2">
                   <div className="bg-[#F8F7F2] rounded-xl p-4 flex items-center justify-center">
@@ -117,6 +138,39 @@ export default function Book() {
                   )}
                 </div>
               </div>
+
+              {/* Trailer Section - Show at top if available */}
+              {selectedBook.trailer && (
+                <div className="mb-8">
+                  <div className="flex items-center gap-2 mb-3">
+                    <svg className="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd"/>
+                    </svg>
+                    <span className="text-xs font-roboto-slab font-bold text-[#1E4E79] tracking-wider uppercase">Book Trailer</span>
+                  </div>
+                  <div className="relative rounded-xl overflow-hidden shadow-lg border-2 border-[#C9A227]/20">
+                    <div className="bg-[#1A1210] px-4 py-2 flex items-center gap-2">
+                      <div className="flex gap-1">
+                        <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                        <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                      </div>
+                      <span className="text-[10px] font-roboto-slab font-bold text-white/40 tracking-wider uppercase ml-2">
+                        {selectedBook.title.length > 40 ? selectedBook.title.substring(0, 40) + '...' : selectedBook.title}
+                      </span>
+                    </div>
+                    <div className="aspect-video">
+                      <iframe 
+                        className="w-full h-full"
+                        src={`https://www.youtube.com/embed/${selectedBook.trailer.split('v=')[1]}?rel=0&modestbranding=1`}
+                        title={`${selectedBook.title} - Trailer`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>

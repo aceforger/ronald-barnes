@@ -3,8 +3,8 @@ export const authorInfo = {
   firstName: "Ronald",
   email: "ron.barnes7@yahoo.com",
   bio: "Ron attended Coe College in Cedar Rapids, Iowa receiving his B.A. in Economics. As a 3 term all-conference basketballer, Ron was inducted into the Coe College athletic hall of fame. After working in corporate America for 15 years, Ron went into business developing consumer products for retail chains in America.",
-  bio2: "In 2012 Ron returned to graduate school to pursue his academic goals. Ron spent 1 year at the McCormick Theological Seminary. He then transferred to the University of Chicago Divinity School where he graduated with a M.A. in Religious studies 2015. Ron is continuing his academic pursuits toward a doctorate in psychology at Grand Canyon University in Phoenix, Arizona.",
-  bio3: "Ron has long been interested in the World as it relates to Religion and in Religion as it relates to the World; politically, socially, economically, practically and especially in human relationships. 'Practice what you Preach, Preach what you Practice' is an effort to reconcile the diversity of Religions, their philosophies, doctrines and practices with the world in which they exist.",
+  bio2: "In 2012, Ron returned to graduate school to pursue his academic goals. Ron spent 1 year at the McCormick Theological Seminary. He then transferred to the University of Chicago Divinity School where he graduated with a M.A. in Religious studies 2015. Ron then continued his academic pursuits toward a doctorate in learning psychology at Grand Canyon University in Phoenix, Arizona. The focus of Ron's PhD study was to integrate technology into the learning process. Ron then went on to pursue a second PhD program at National Louis University where he studied Community Psychology. Community Psychology is the psychology discipline to align the goals and objectives of institutions, organizations and businesses in the Community with the needs of the people in the community. Thereafter, Ron attended Dunster Business College in Switzerland where he studied International psychology focusing on cultural psychology. Cultural psychology is the study of how cultural traditions and social practices shape, regulate, and express the human mind and behaviors. It operates on the core principle that mind and culture are inseparable: individuals are shaped by their society, and in turn, their behaviors and actions continuously evolve and shape that culture.",
+  bio3: "Ron’s interested is in the concept of integrated learning, integrated knowledge and the connection of interpersonal relationships. Ron’s core belief is that humanity’s challenge, since creation is to positively complement God and Nature’s creation of diversity in the world. This diminishes the human intellect and indicates the failure in the intrinsic growth of humanity. Simply, it speaks to the ignorance in human beings that dominates their intelligence. The ethics and morals in religious doctrines have even experienced fracture under the influence of humans. The political, social, economic, justice and legal systems that overview human relationships are grossly imbalanced. Humans need to understand that balance and equity will construct a better world. Greed and racism are factors contributing to the cesspool we live in.",
   quote: "Where one person sees a 'skeptical impossibility', another person sees a 'realistic possibility' and yet another person has absolute clarity to accomplish what others call impossible.",
   tribute: `With gratitude and unrepayable appreciation, in addition to my parents, I want to thank Ms. Carolyn Smith.
 
@@ -17,7 +17,7 @@ There are two primary lessons I have learned … 1) If I can do it, anyone can. 
 Ms. Carolyn Smith and my attendance at the University of Chicago Laboratory High School was the door that opened for me. If you want to read more of my academic works visit: https://chicago.academia.edu/RonBarnes
 
 Also I am a proud member of Kappa Alpha Psi fraternity. Unless I went to college and graduated I would never have been inducted as a member of this prominent Black Fraternity nor would my mind have developed to embrace the power of serving society, nor would I have written a single book. So far, I've written 16 and published 10. This is a legacy I attribute to Ms. Carolyn Smith.`,
-  roles: ["Author", "Scholar", "Theologian", "Philosopher"],
+  roles: ["Psychologist", "Author", "Scholar", "Theologian"],
   academicLink: "https://chicago.academia.edu/RonBarnes"
 }
 
@@ -33,7 +33,8 @@ export const book = [
     status: "published",
     statusText: "Available Now",
     themes: ["Politics", "Economics", "Social Justice", "American Society"],
-    purchaseLinks: [{ name: "Amazon", url: "https://www.amazon.com/Pyrrhic-State-America-Make-Great/dp/1638447152/ref=sr_1_1?crid=C74Y1NN6XT1G&dib=eyJ2IjoiMSJ9.Z0v_wgS1H4Tqwc7RKuL1HA.isnmaIB4OaAb49hWNSKrIklVIYvxMNI67hlwuHfp9vI&dib_tag=se&keywords=The+Pyrrhic+State+of+America%3A+Make+America+Great&nsdOptOutParam=true&qid=1781206574&s=books&sprefix=the+pyrrhic+state+of+america+make+america+great%2Cstripbooks-intl-ship%2C466&sr=1-1" }]
+    purchaseLinks: [{ name: "Amazon", url: "https://www.amazon.com/Pyrrhic-State-America-Make-Great/dp/1638447152/ref=sr_1_1?crid=C74Y1NN6XT1G&dib=eyJ2IjoiMSJ9.Z0v_wgS1H4Tqwc7RKuL1HA.isnmaIB4OaAb49hWNSKrIklVIYvxMNI67hlwuHfp9vI&dib_tag=se&keywords=The+Pyrrhic+State+of+America%3A+Make+America+Great&nsdOptOutParam=true&qid=1781206574&s=books&sprefix=the+pyrrhic+state+of+america+make+america+great%2Cstripbooks-intl-ship%2C466&sr=1-1" }],
+    trailer: "https://www.youtube.com/watch?v=Qto8k9qATJQ"
   },
   {
     id: 2,
@@ -59,7 +60,8 @@ export const book = [
     status: "published",
     statusText: "Available Now",
     themes: ["Religion", "Ethics", "Philosophy", "Social Justice"],
-    purchaseLinks: [{ name: "Amazon", url: "https://www.amazon.com/Practice-what-you-Preach/dp/1504368495" }]
+    purchaseLinks: [{ name: "Amazon", url: "https://www.amazon.com/Practice-what-you-Preach/dp/1504368495" }],
+    trailer: "https://www.youtube.com/watch?v=pBbttZXPh5w"
   },
   {
     id: 4,
