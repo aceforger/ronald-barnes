@@ -19,12 +19,20 @@ export default function About() {
 
         <div className="max-w-5xl mx-auto">
           {/* Quote Card */}
-          <div className="bg-gradient-to-br from-[#1E4E79] to-[#153A5C] rounded-3xl p-8 md:p-10 text-center mb-12 animate-fade-up shadow-lg">
-            <svg className="w-8 h-8 text-white/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-            </svg>
-            <p className="text-white/80 font-playfair italic text-xl md:text-2xl leading-relaxed">"{authorInfo.quote}"</p>
-          </div>
+          {/* Quote Card */}
+<div className="bg-gradient-to-br from-[#1E4E79] to-[#153A5C] rounded-3xl p-8 md:p-10 text-center mb-12 animate-fade-up shadow-lg">
+  <svg className="w-8 h-8 text-white/30 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+  </svg>
+  <p className="text-white/80 font-playfair italic text-xl md:text-2xl leading-relaxed">
+    "{authorInfo.quote}"
+  </p>
+  <div className="mt-4 pt-4 border-t border-white/10">
+    <p className="text-[#C9A227] font-roboto-slab font-bold text-sm tracking-wider uppercase">
+      {authorInfo.name}
+    </p>
+  </div>
+</div>
 
           {/* Bio Cards - All full width stacked vertically */}
           <div className="space-y-6 mb-6">
@@ -56,16 +64,20 @@ export default function About() {
 
             {/* Bio 3 - World View */}
             <div className="bg-[#F8F7F2] p-8 rounded-2xl border border-[#1E4E79]/8 hover-lift animate-fade-up-delayed-2">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-[#C9A227]/10 rounded-full flex items-center justify-center">
-                  <svg className="w-5 h-5 text-[#C9A227]" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd"/>
-                  </svg>
-                </div>
-                <span className="text-xs font-roboto-slab font-bold text-[#C9A227] tracking-wider uppercase">World View</span>
-              </div>
-              <p className="text-[#1E4E79]/60 leading-relaxed font-roboto-slab">{authorInfo.bio3}</p>
-            </div>
+  <div className="flex items-center gap-3 mb-4">
+    <div className="w-10 h-10 bg-[#C9A227]/10 rounded-full flex items-center justify-center">
+      <svg className="w-5 h-5 text-[#C9A227]" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd"/>
+      </svg>
+    </div>
+    <span className="text-xs font-roboto-slab font-bold text-[#C9A227] tracking-wider uppercase">Health Psychology Research</span>
+  </div>
+  <div className="text-[#1E4E79]/60 leading-relaxed font-roboto-slab space-y-4">
+    {authorInfo.bio3.split('\n\n').map((paragraph, i) => (
+      <p key={i}>{paragraph}</p>
+    ))}
+  </div>
+</div>
           </div>
 
           {/* Roles */}

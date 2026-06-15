@@ -201,7 +201,7 @@ export default function Hero() {
           </p>
 
           <p className="text-[#1E4E79]/50 font-roboto-slab text-sm mb-8 max-w-2xl mx-auto leading-relaxed">
-            Technology Access Television, Chicago's longest running technology-focused TV program, presents a discussion on the evolving business models shaping the electric utility industry. Bruce Montgomery, producer and host of TechAccessTV, interviews Ron Barnes about his new book. Studio recorded on August 2, 2019 at Chicago Access Network Television Studios.
+            “Recorded at the Chicago Access Network Television Studios”.
           </p>
 
         </div>
